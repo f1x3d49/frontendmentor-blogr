@@ -1,5 +1,11 @@
+import Intro from "./pages/Intro";
+
 function App() {
-  return <div className="text-6xl text-lred">Hello</div>;
+  return (
+    <div className="min-h-screen bg-white">
+      <Intro />
+    </div>
+  );
 }
 
 export default App;

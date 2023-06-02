@@ -17,6 +17,9 @@ module.exports = {
         overpass: ["Overpass", "sans-serif"],
         ubuntu: ["Ubuntu", "sans-serif"],
       },
+      backgroundImage: {
+        introd: "url(/src/images/bg-pattern-intro-desktop.svg)",
+      },
     },
   },
   plugins: [],
