@@ -1,14 +1,15 @@
 import React from "react";
-import intro from "../images/bg-pattern-intro-desktop.svg";
+import introd from "../images/bg-pattern-intro-desktop.svg";
+import introm from "../images/bg-pattern-intro-mobile.svg";
 
 const Intro = () => {
   return (
-    <section className="w-full h-80 bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] rounded-bl-[5rem] overflow-hidden">
-      <img
-        src={intro}
-        alt=""
-        className="mt-[-600px] ml-[475px] h-auto scale-125"
-      />
+    <section className="w-auto h-96 bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] rounded-bl-[5rem] overflow-hidden">
+      <picture>
+        <source media="(min-width: 768px)" srcset={introd} />
+        <source srcset={introm} />
+        <img src={introm} alt="" className="md:mt-[-550px] scale-125" />
+      </picture>
     </section>
   );
 };
