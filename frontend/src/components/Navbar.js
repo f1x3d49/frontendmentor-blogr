@@ -4,7 +4,9 @@ import { ReactComponent as Logo } from "../images/logo.svg";
 import { ReactComponent as Hamburger } from "../images/icon-hamburger.svg";
 import { ReactComponent as Close } from "../images/icon-close.svg";
 import { ReactComponent as ArrowD } from "../images/icon-arrow-dark.svg";
+import { ReactComponent as ArrowL } from "../images/icon-arrow-light.svg";
 import MobileDropdown from "./MobileDropdown";
+import MediumDropdown from "./MediumDropdown";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -13,9 +15,21 @@ const Navbar = () => {
       <div className="flex items-center gap-8">
         <Logo className="scale-75" />
         <ul className="hidden md:flex">
-          <li className="p-4">Product</li>
-          <li className="p-4">Company</li>
-          <li className="p-4">Connect</li>
+          <li className="p-4 flex items-center gap-2">
+            <p className="font-ubuntu text-[16px] text-gblue font-medium hover:cursor-pointer">
+              Product
+            </p>
+            <ArrowL className="mt-1" />
+          </li>
+          <li className="p-4 flex items-center gap-2">
+            <p className="font-ubuntu text-[16px] text-gblue font-medium hover:cursor-pointer">
+              Company
+            </p>
+            <ArrowL className="mt-1" />
+          </li>
+          <li className="p-4">
+            <MediumDropdown />
+          </li>
         </ul>
       </div>
       <div className="hidden md:flex gap-12">
@@ -36,28 +50,32 @@ const Navbar = () => {
             <Close className="ease-out duration-500" />
           )}
         </Popover.Button>
-        <Popover.Panel className="absolute z-10 bg-white top-24 left-0 ml-12 w-[300px] max-h-96 rounded-md shadow-md px-4">
+        <Popover.Panel className="absolute z-10 bg-white top-24 left-0 ml-12 w-[300px] max-h-[400px] rounded-md shadow-md px-4">
           <div className="flex flex-col items-center justify-center">
-            <ul className="flex flex-col">
+            <ul className="flex flex-col w-full">
               <li className="flex items-center justify-center gap-2 p-1 hover:cursor-pointer">
-                <p className="text-[16px] font-ubuntu font-medium text-vdbblue">
+                <p className="text-[18px] font-ubuntu font-normal text-vdbblue">
                   Product
                 </p>
                 <ArrowD className="mt-1" />
               </li>
               <li className="flex items-center justify-center gap-2 p-1 hover:cursor-pointer">
-                <p className="text-[16px] font-ubuntu font-medium text-vdbblue">
+                <p className="text-[18px] font-ubuntu font-normal text-vdbblue">
                   Company
                 </p>
                 <ArrowD className="mt-1" />
               </li>
-              <li className="p-1">
+              <li className="p-1 w-full">
                 <MobileDropdown />
               </li>
             </ul>
-            <div className="w-full border-t-[1px] border-gblue flex flex-col">
-              <button>Login</button>
-              <button>Sign Up</button>
+            <div className="w-full border-t-[1px] border-gblue py-4 flex items-center flex-col gap-4">
+              <button className="font-ubuntu text-[16px] text-vdbblue">
+                Login
+              </button>
+              <button className="rounded-full w-1/2 p-2 font-ubuntu text-[16px] font-medium text-white bg-gradient-to-r from-[#ff8f70] to-[#ff3d54]">
+                Sign Up
+              </button>
             </div>
           </div>
         </Popover.Panel>
