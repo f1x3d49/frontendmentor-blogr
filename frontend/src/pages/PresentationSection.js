@@ -6,7 +6,7 @@ import ParagraphComponent from "../components/ParagraphComponent";
 const PresentationSection = () => {
   return (
     <section className="flex flex-col gap-8 text-center py-8 md:py-20 px-4">
-      <h1 className="text-xl md:text-2xl font-overpass text-vdblue font-semibold ">
+      <h1 className="text-xl md:text-3xl font-overpass text-vdblue font-semibold ">
         Designed for the future
       </h1>
       <div className="flex flex-col md:flex-row gap-8">

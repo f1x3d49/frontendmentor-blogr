@@ -1,4 +1,5 @@
 import Intro from "./pages/Intro";
+import PhoneSection from "./pages/PhoneSection";
 import PresentationSection from "./pages/PresentationSection";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="min-h-screen bg-white">
       <Intro />
       <PresentationSection />
+      <PhoneSection />
     </div>
   );
 }
