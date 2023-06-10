@@ -14,7 +14,7 @@ const MediumDropdown = () => {
       >
         <p
           className={`font-ubuntu text-[16px]  font-medium ${
-            open ? "text-white underline" : "text-gblue"
+            open ? "text-white underline opacity-100" : "text-white opacity-80"
           }`}
         >
           Connect

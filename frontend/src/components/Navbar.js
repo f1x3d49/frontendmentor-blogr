@@ -16,13 +16,13 @@ const Navbar = () => {
         <Logo className="scale-75" />
         <ul className="hidden md:flex">
           <li className="p-4 flex items-center gap-2">
-            <p className="font-ubuntu text-[16px] text-white font-medium hover:cursor-pointer">
+            <p className="font-ubuntu text-[16px] text-white opacity-80 font-medium hover:cursor-pointer">
               Product
             </p>
             <ArrowL className="mt-1" />
           </li>
           <li className="p-4 flex items-center gap-2">
-            <p className="font-ubuntu text-[16px] text-white font-medium hover:cursor-pointer">
+            <p className="font-ubuntu text-[16px] text-white opacity-80 font-medium hover:cursor-pointer">
               Company
             </p>
             <ArrowL className="mt-1" />
